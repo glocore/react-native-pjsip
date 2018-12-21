@@ -4,7 +4,7 @@
     "dictionaries": ["jsdoc"]
   },
   "source": {
-    "include": ["lib", "package.json", "README.md"],
+    "include": ["guides", "src", "guides/README.md"],
     "includePattern": ".js$",
     "excludePattern": "(node_modules/|docs)"
   },
@@ -15,13 +15,22 @@
     "cleverLinks": false,
     "monospaceLinks": true,
     "useLongnameInNav": false,
-    "showInheritedInNav": true
+    "showInheritedInNav": true,
+    "default": {
+      "staticFiles": {
+        "include": [
+            "./guides"
+        ],
+        "excludePattern": "^(.*\\.md$)"
+      }
+    }
   },
   "opts": {
     "destination": "./docs/",
     "encoding": "utf8",
     "private": true,
     "recurse": true,
-    "template": "./node_modules/minami"
+    "template": "./node_modules/minami",
+    "tutorials": "./guides"
   }
 }

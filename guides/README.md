@@ -1,4 +1,6 @@
-# react-native-pjsip
+# [platonish/react-native-pjsip](https://github.com/platonish/react-native-pjsip)  
+
+### (forked from [datso/react-native-pjsip](https://github.com/datso/react-native-pjsip))
 
 A [PJSIP](http://www.pjsip.org/) module for React Native.
 

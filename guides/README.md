@@ -14,6 +14,8 @@ A [PJSIP](http://www.pjsip.org/) module for React Native.
 
 ## Installation
 
+`npm i git://github.com/platonish/react-native-pjsip.git#master --save` 
+
 - [iOS](tutorial-installation_ios)
 - [Android](tutorial-installation_android)
 

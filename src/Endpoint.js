@@ -47,17 +47,22 @@ import Account from './Account'
 export default class Endpoint extends EventEmitter {
 
     constructor() {
-        super();
-
         // Subscribe to Accounts events
+        DeviceEventEmitter.removeAllListeners('pjSipRegistrationChanged');
         DeviceEventEmitter.addListener('pjSipRegistrationChanged', this._onRegistrationChanged.bind(this));
 
         // Subscribe to Calls events
+        DeviceEventEmitter.removeAllListeners('pjSipCallReceived');
         DeviceEventEmitter.addListener('pjSipCallReceived', this._onCallReceived.bind(this));
+        DeviceEventEmitter.removeAllListeners('pjSipCallChanged');
         DeviceEventEmitter.addListener('pjSipCallChanged', this._onCallChanged.bind(this));
+        DeviceEventEmitter.removeAllListeners('pjSipCallTerminated');
         DeviceEventEmitter.addListener('pjSipCallTerminated', this._onCallTerminated.bind(this));
+        DeviceEventEmitter.removeAllListeners('pjSipCallScreenLocked');
         DeviceEventEmitter.addListener('pjSipCallScreenLocked', this._onCallScreenLocked.bind(this));
+        DeviceEventEmitter.removeAllListeners('pjSipMessageReceived');
         DeviceEventEmitter.addListener('pjSipMessageReceived', this._onMessageReceived.bind(this));
+        DeviceEventEmitter.removeAllListeners('pjSipConnectivityChanged');
         DeviceEventEmitter.addListener('pjSipConnectivityChanged', this._onConnectivityChanged.bind(this));
     }
 

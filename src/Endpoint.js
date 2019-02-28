@@ -47,6 +47,7 @@ import Account from './Account'
 export default class Endpoint extends EventEmitter {
 
     constructor() {
+        super();
         // Subscribe to Accounts events
         DeviceEventEmitter.removeAllListeners('pjSipRegistrationChanged');
         DeviceEventEmitter.addListener('pjSipRegistrationChanged', this._onRegistrationChanged.bind(this));
